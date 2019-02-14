@@ -1,4 +1,4 @@
-<?php # mysqli_connect.inc.php
+<?php // Filename: mysqli_connect.inc.php
 
 # Create a new connection to the database
 $host = 'localhost';

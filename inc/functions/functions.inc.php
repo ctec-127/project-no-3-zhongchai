@@ -1,4 +1,15 @@
-<?php
+<?php // Filename: function.inc.php
+
+function display_message(){
+    if (isset($_GET['message'])) {
+        $message = $_GET['message'];
+        echo '<div class="mt-4 alert alert-success" role="alert">';
+        echo $message;
+        echo '</div>';
+    }
+}
+
+
 function display_letter_filters($filter){  
     echo '<span class="mr-3">Filter by <strong>Last Name</strong></span>';
  
@@ -6,14 +17,15 @@ function display_letter_filters($filter){
 
     for($i=0 ; $i < count($letters) ; $i++){ 
         if ($filter == $letters[$i]) {
-            $class = 'class="text-light font-weight-bold p-1 mr-2 bg-dark"';
+            $class = 'class="text-light font-weight-bold p-1 mr-3 bg-dark"';
         } else {
-            $class = 'class="text-secondary p-1 mr-2 bg-light border rounded"';
+            $class = 'class="text-secondary p-1 mr-3 bg-light border rounded"';
         }
-        echo "<u><a $class href='?filter=$letters[$i]' title='$letters[$i]'>$letters[$i]</a></u>&nbsp;&nbsp;";
+        echo "<u><a $class href='?filter=$letters[$i]' title='$letters[$i]'>$letters[$i]</a></u>";
     }
     echo '<a class="text-secondary p-2 mr-2 bg-success text-light border rounded" href="?clearfilter" title="Reset Filter">Reset</a>&nbsp;&nbsp;';
 }
+
 
 function display_record_table($result){
     echo '<div class="table-responsive">';
@@ -35,6 +47,7 @@ function display_record_table($result){
     echo '</table>';
     echo '</div>';
 }
+
 
 function display_error_bucket($error_bucket){
     echo '<p>The following errors were deteced:</p>';

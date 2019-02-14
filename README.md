@@ -108,6 +108,6 @@ The database table contains new columns:
 
 There will be three assignment deliveries that you will need to meet:
 
-1. The first deliverable will for you to send me a screenshot on **Slack** showing that you have the base code and database table up and running on the computer that you will be performing your development on. This is due by **Sunday, February 17, 2019**.
-2. The next one will be due on **Sunday, February 24, 2019**. This delivarable will include the changes to the **create_record.php** form including the insertion of new data into the student_v2 table. You will need to **push** your code to **GitHub** for me to review, test and grade.
-3. The last deliverable will be on **Sunday, March 3, 2019**. This deliverable will include the modifications to **display_records.php** and the commenting of all the code. You will need to push your code to **GitHub** for me to review, test and grade.
+1. The first deliverable will for you to send me a screenshot on **Slack** showing that you have the base code and database table up and running on the computer that you will be performing your development on. This is due by **Monday, February 18, 2019**. I will also expect that you will have all of the code reviewed and commented. Push your updates to **GitHub**
+2. The next one will be due on **Monday, February 25, 2019**. This delivarable will include the changes to the **create_record.php** form including the insertion of new data into the student_v2 table. You will need to **push** your code to **GitHub** for me to review, test and grade.
+3. The last deliverable will be on **Monday, March 4, 2019**. This deliverable will include the modifications to **display_records.php** and the commenting of all the code you added. You will need to push your code to **GitHub** for me to review, test and grade.

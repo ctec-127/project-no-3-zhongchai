@@ -1,4 +1,4 @@
-<?php
+<?php // Filename: connect.inc.php
 
 require __DIR__ . "/../db/mysqli_connect.inc.php";
 require __DIR__ . "/../functions/functions.inc.php";
@@ -35,6 +35,9 @@ if ($result->num_rows == 0) {
 
 // display alphabet filters
 display_letter_filters($filter);
+
+// display message if any
+display_message();
 
 // display the data
 display_record_table($result);
