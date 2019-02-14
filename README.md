@@ -1,1 +1,2 @@
-# ctec-127-project-3
+# CTEC 127 - Project No. 3
+
