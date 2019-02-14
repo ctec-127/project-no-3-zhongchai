@@ -18,7 +18,7 @@ if (isset($_GET['clearfilter'])){
     $filter = '';
 }
 
-$sql = "SELECT * FROM $db_table WHERE last_name LIKE '$filter%' ORDER BY $orderby";
+$sql = "SELECT * FROM $db_table WHERE last_name LIKE '$filter%' ORDER BY $orderby ASC";
 
 $result = $db->query($sql);
 

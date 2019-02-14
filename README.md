@@ -106,7 +106,8 @@ The database table contains new columns:
 4. Comment all of the PHP code. You don't have to comment evey line. Provide comments that help show me that you understand what the code is doing.
 5. Test your code thoroughly.
 
-There will be two assignment deliveries that you will need to meet:
+There will be three assignment deliveries that you will need to meet:
 
-1. The first one will be due on **Sunday, February 24, 2019**. This delivarable will include the changes to the **create_record.php** form including the insertion of new data into the student_v2 table. You will need to **push** your code to **GitHub** for me to review, test and grade.
-2. The second deliverable will be on **Sunday, March 3, 2019**. This deliverable will include the modifications to **display_records.php** and the commenting of all the code. You will need to push your code to **GitHub** for me to review, test and grade.
+1. The first deliverable will for you to send me a screenshot on **Slack** showing that you have the base code and database table up and running on the computer that you will be performing your development on. This is due by **Sunday, February 17, 2019**.
+2. The next one will be due on **Sunday, February 24, 2019**. This delivarable will include the changes to the **create_record.php** form including the insertion of new data into the student_v2 table. You will need to **push** your code to **GitHub** for me to review, test and grade.
+3. The last deliverable will be on **Sunday, March 3, 2019**. This deliverable will include the modifications to **display_records.php** and the commenting of all the code. You will need to push your code to **GitHub** for me to review, test and grade.
