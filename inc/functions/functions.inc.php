@@ -1,4 +1,4 @@
-<?php // Filename: function.inc.php
+<?php // Filename: functions.inc.php
 
 function display_message(){
     if (isset($_GET['message'])) {
@@ -17,9 +17,9 @@ function display_letter_filters($filter){
 
     for($i=0 ; $i < count($letters) ; $i++){ 
         if ($filter == $letters[$i]) {
-            $class = 'class="text-light font-weight-bold p-1 mr-3 bg-dark"';
+            $class = 'class="text-secondary font-weight-bold p-1 mr-3 bg-light"';
         } else {
-            $class = 'class="text-secondary p-1 mr-3 bg-light border rounded"';
+            $class = 'class="text-light p-1 mr-3 bg-dark rounded"';
         }
         echo "<u><a $class href='?filter=$letters[$i]' title='$letters[$i]'>$letters[$i]</a></u>";
     }
@@ -29,7 +29,7 @@ function display_letter_filters($filter){
 
 function display_record_table($result){
     echo '<div class="table-responsive">';
-    echo "<table class=\"table table-striped table-hover table-sm mt-4\">";
+    echo "<table class=\"table table-dark table-bordered table-striped table-hover table-sm mt-4\">";
     echo '<thead class="thead-dark"><tr><th>Actions</th>
     <th><a href="?sortby=student_id">Student ID</a></th>
     <th><a href="?sortby=first_name">First Name</a></th>
@@ -38,13 +38,14 @@ function display_record_table($result){
     <th><a href="?sortby=phone">Phone</a></th>
     <th><a href="?sortby=gpa">GPA</a></th>
     <th><a href="?sortby=financial_aid">Financial Aid</a></th>
-    <th><a href="?sortby=degree_program">Degree Program</a></th></tr>
+    <th><a href="?sortby=degree_program">Degree Program</a></th>
+    <th><a href="?sortby=grad_date">Graduation Date</a></th></tr>
     </thead>';
     # $row will be an associative array containing one row of data at a time
     while ($row = $result->fetch_assoc()){
         # display rows and columns of data
         echo '<tr>';
-        echo "<td>Update&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"delete-record.php?id={$row['id']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+        echo "<td><a href=\"update-record.php?id={$row['id']}\">Update</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"delete-record.php?id={$row['id']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
         echo "<td>{$row['student_id']}</td>";
         echo "<td><strong>{$row['first_name']}</strong></td>";
         echo "<td><strong>{$row['last_name']}</strong></td>";
@@ -53,6 +54,7 @@ function display_record_table($result){
         echo "<td>{$row['gpa']}</td>";
         echo "<td>{$row['financial_aid']}</td>";
         echo "<td>{$row['degree_program']}</td>";
+        echo "<td>{$row['grad_date']}</td>";
         echo '</tr>';
     } // end while
     // closing table tag and div
@@ -62,7 +64,7 @@ function display_record_table($result){
 
 
 function display_error_bucket($error_bucket){
-    echo '<p>The following errors were deteced:</p>';
+    echo '<p>The following errors were detected:</p>';
     echo '<div class="pt-4 alert alert-warning" role="alert">';
         echo '<ul>';
         foreach ($error_bucket as $text){
